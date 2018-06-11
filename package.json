@@ -5,5 +5,14 @@
   "repository":
     "git@github.com:SethGunnells/legendary-marvel-game-generator.git",
   "author": "Seth Gunnells <sethgunnells@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "start": "parcel src/index.html"
+  },
+  "dependencies": {
+    "hyperapp": "^1.2.6"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.8.1"
+  }
 }
