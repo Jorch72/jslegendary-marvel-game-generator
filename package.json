@@ -1,0 +1,9 @@
+{
+  "name": "legendary-marvel-game-generator",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository":
+    "git@github.com:SethGunnells/legendary-marvel-game-generator.git",
+  "author": "Seth Gunnells <sethgunnells@gmail.com>",
+  "license": "MIT"
+}
