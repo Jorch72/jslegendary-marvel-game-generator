@@ -1,0 +1,66 @@
+{
+  "henchmen": [
+    { "name": "Doombot Legion", "set": "Base Game" },
+    { "name": "Hand Ninjas", "set": "Base Game" },
+    { "name": "Savage Land Mutates", "set": "Base Game" },
+    { "name": "Sentinels", "set": "Base Game" }
+  ],
+  "masterminds": [
+    {
+      "name": "Arnim Zola",
+      "set": "Captain America 75th Anniversary",
+      "villains": ["Zola's Creations"]
+    },
+    {
+      "name": "Baron Heinrich Zemo",
+      "set": "Captain America 75th Anniversary",
+      "villains": ["Masters of Evil (WWII)"]
+    },
+    {
+      "name": "Doctor Doom",
+      "set": "Base Game",
+      "henchmen": ["Doombot Legion"]
+    },
+    {
+      "name": "Galactus",
+      "set": "Fantastic Four",
+      "villains": ["Heralds of Galactus"]
+    },
+    {
+      "name": "Loki",
+      "set": "Base Game",
+      "villains": ["Enemies of Asgard"]
+    },
+    {
+      "name": "Magneto",
+      "set": "Base Game",
+      "villains": ["The Brotherhood"]
+    },
+    {
+      "name": "Mole Man",
+      "set": "Fantastic Four",
+      "villains": ["Subterranea"]
+    },
+    {
+      "name": "Red Skull",
+      "set": "Base Game",
+      "villans": ["Hydra"]
+    }
+  ],
+  "villains": [
+    { "name": "Enemies of Asgard", "set": "Base Game" },
+    { "name": "Heralds of Galactus", "set": "Fantastic Four" },
+    { "name": "Hydra", "set": "Base Game" },
+    { "name": "Masters of Evil", "set": "Base Game" },
+    {
+      "name": "Masters of Evil (WWII)",
+      "set": "Captain America 75th Anniversary"
+    },
+    { "name": "Radiation", "set": "Base Game" },
+    { "name": "Skrulls", "set": "Base Game" },
+    { "name": "Spider-Foes", "set": "Base Game" },
+    { "name": "Subterranea", "set": "Fantastic Four" },
+    { "name": "The Brotherhood", "set": "Base Game" },
+    { "name": "Zola's Creations", "set": "Captain America 75th Anniversary" }
+  ]
+}
