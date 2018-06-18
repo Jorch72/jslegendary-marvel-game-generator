@@ -1,0 +1,8 @@
+{
+  "extends": "gsandf-react",
+  "settings": {
+    "react": {
+      "pragma": "h"
+    }
+  }
+}

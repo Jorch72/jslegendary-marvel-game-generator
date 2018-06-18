@@ -1,4 +1,4 @@
-import { h, app } from "hyperapp";
+import { h, app } from 'hyperapp';
 
 const view = () => <h1>Hello, World!</h1>;
 
