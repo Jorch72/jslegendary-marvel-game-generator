@@ -2,4 +2,5 @@
 *.swp
 dist/
 .cache/
+node_modules/
 
