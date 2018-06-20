@@ -1,4 +1,12 @@
 {
+  "expansions": [
+    "Base Game",
+    "Captain America 75th Anniversary",
+    "Dark City",
+    "Fantastic Four",
+    "Guardians of the Galaxy",
+    "Paint the Town Red"
+  ],
   "henchmen": [
     { "name": "Doombot Legion", "set": "Base Game" },
     { "name": "Hand Ninjas", "set": "Base Game" },
@@ -9,42 +17,42 @@
     {
       "name": "Arnim Zola",
       "set": "Captain America 75th Anniversary",
-      "villains": ["Zola's Creations"]
+      "villains": "Zola's Creations"
     },
     {
       "name": "Baron Heinrich Zemo",
       "set": "Captain America 75th Anniversary",
-      "villains": ["Masters of Evil (WWII)"]
+      "villains": "Masters of Evil (WWII)"
     },
     {
       "name": "Doctor Doom",
       "set": "Base Game",
-      "henchmen": ["Doombot Legion"]
+      "henchmen": "Doombot Legion"
     },
     {
       "name": "Galactus",
       "set": "Fantastic Four",
-      "villains": ["Heralds of Galactus"]
+      "villains": "Heralds of Galactus"
     },
     {
       "name": "Loki",
       "set": "Base Game",
-      "villains": ["Enemies of Asgard"]
+      "villains": "Enemies of Asgard"
     },
     {
       "name": "Magneto",
       "set": "Base Game",
-      "villains": ["The Brotherhood"]
+      "villains": "The Brotherhood"
     },
     {
       "name": "Mole Man",
       "set": "Fantastic Four",
-      "villains": ["Subterranea"]
+      "villains": "Subterranea"
     },
     {
       "name": "Red Skull",
       "set": "Base Game",
-      "villans": ["Hydra"]
+      "villains": "Hydra"
     }
   ],
   "villains": [
