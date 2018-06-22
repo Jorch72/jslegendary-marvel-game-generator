@@ -1,8 +1,9 @@
 import { List } from 'immutable';
 import rawData from '../data.json';
 import Expansion from '../types/Expansion.js';
+import Mastermind from '../types/Mastermind.js';
 
-export const loadExpansionList = () => {
+export const loadData = () => {
   return {
     expansions: List(
       rawData.expansions.map(
@@ -11,6 +12,9 @@ export const loadExpansionList = () => {
             name: expansion
           })
       )
+    ),
+    masterminds: List(
+      rawData.masterminds.map(mastermind => Mastermind(mastermind))
     )
   };
 };

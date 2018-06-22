@@ -1,34 +1,32 @@
 import { h, app } from 'hyperapp';
-import { toggleExpansion } from './actions/index.js';
-import { getInitialConfig } from './services/gen.js';
-import { loadExpansionList } from './services/data.js';
+import { Map } from 'immutable';
+import actions from './actions/index.js';
+import { loadData } from './services/data.js';
 import ExpansionList from './components/ExpansionList.js';
 import PlayerButtons from './components/PlayerButtons.js';
 
-const actions = {
-  getInitialConfig: getInitialConfig,
-  toggleExpansion
-};
-
-const expansions = loadExpansionList();
+const data = loadData();
 
 const view = (state, actions) => (
   <div>
     <h1>LEGENDARY Game Generator</h1>
+    <button onclick={() => console.log(state)}>Log State</button>
+    <button onclick={() => console.log(actions)}>Log Actions</button>
     <h2>Choose Number of Players:</h2>
-    <PlayerButtons />
+    <PlayerButtons selectPlayers={actions.selectPlayers} />
     <ExpansionList
       expansions={state.expansions}
       toggle={actions.toggleExpansion}
     />
-    <button onclick={() => console.log(state)}>Log State</button>
+    <button onclick={actions.generateGame}>Generate Game</button>
   </div>
 );
 
 app(
   {
     bystanders: 0,
-    ...expansions
+    game: Map(),
+    ...data
   },
   actions,
   view,

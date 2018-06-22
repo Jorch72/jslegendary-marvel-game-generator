@@ -1,5 +1,5 @@
 import { Record } from 'immutable';
 
-const ExpansionFactory = Record({ name: null, enabled: true });
+const ExpansionFactory = Record({ enabled: true, name: null });
 
 export default ExpansionFactory;
