@@ -1,5 +1,4 @@
 import { h, app } from 'hyperapp';
-import { Map } from 'immutable';
 import actions from './actions/index.js';
 import { loadData } from './services/data.js';
 import ExpansionList from './components/ExpansionList.js';
@@ -23,11 +22,7 @@ const view = (state, actions) => (
 );
 
 app(
-  {
-    bystanders: 0,
-    game: Map(),
-    ...data
-  },
+  data,
   actions,
   view,
   document.body

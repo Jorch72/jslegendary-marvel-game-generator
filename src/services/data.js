@@ -3,6 +3,7 @@ import rawData from '../data.json';
 import Expansion from '../types/Expansion.js';
 import Mastermind from '../types/Mastermind.js';
 import Scheme from '../types/Scheme.js';
+import Villain from '../types/Villain.js';
 
 export const loadData = () => {
   return {
@@ -17,6 +18,7 @@ export const loadData = () => {
     masterminds: List(
       rawData.masterminds.map(mastermind => Mastermind(mastermind))
     ),
-    schemes: List(rawData.schemes.map(scheme => Scheme(scheme)))
+    schemes: List(rawData.schemes.map(scheme => Scheme(scheme))),
+    villains: List(rawData.villains.map(villain => Villain(villain)))
   };
 };
