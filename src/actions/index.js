@@ -1,13 +1,27 @@
-import { getInitialConfig } from '../services/gen.js';
+import { getEnabledExpansions, getInitialConfig } from '../services/gen.js';
 
 export const generateGame = () => (state, actions) => {
   actions.selectMastermind();
+  actions.pickScheme();
+};
+
+export const pickScheme = () => state => {
+  const enabledExpansions = getEnabledExpansions(state.expansions);
+
+  const possibleSchemes = state.schemes.filter(scheme =>
+    enabledExpansions.some(expansion => scheme.set === expansion)
+  );
+
+  const randomIndex = Math.floor(Math.random() * possibleSchemes.size);
+  const selectedScheme = possibleSchemes.get(randomIndex);
+
+  return {
+    game: state.game.set('scheme', selectedScheme)
+  };
 };
 
 export const selectMastermind = () => state => {
-  const enabledExpansions = state.expansions
-    .filter(expansion => expansion.enabled)
-    .map(expansion => expansion.name);
+  const enabledExpansions = getEnabledExpansions(state.expansions);
 
   const possibleMasterminds = state.masterminds.filter(mastermind =>
     enabledExpansions.some(expansion => mastermind.set === expansion)
@@ -39,6 +53,7 @@ export const toggleExpansion = name => state => {
 
 export default {
   generateGame,
+  pickScheme,
   selectMastermind,
   selectPlayers,
   toggleExpansion

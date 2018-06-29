@@ -2,6 +2,7 @@ import { List } from 'immutable';
 import rawData from '../data.json';
 import Expansion from '../types/Expansion.js';
 import Mastermind from '../types/Mastermind.js';
+import Scheme from '../types/Scheme.js';
 
 export const loadData = () => {
   return {
@@ -15,6 +16,7 @@ export const loadData = () => {
     ),
     masterminds: List(
       rawData.masterminds.map(mastermind => Mastermind(mastermind))
-    )
+    ),
+    schemes: List(rawData.schemes.map(scheme => Scheme(scheme)))
   };
 };

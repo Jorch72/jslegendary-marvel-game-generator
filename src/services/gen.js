@@ -1,3 +1,7 @@
+export const getEnabledExpansions = expansions => (expansions
+  .filter(expansion => expansion.enabled)
+  .map(expansion => expansion.name));
+
 export const getInitialConfig = players => {
   switch (players) {
     case 2:
