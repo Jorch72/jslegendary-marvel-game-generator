@@ -1,12 +1,12 @@
 import { List, Map } from 'immutable';
 
-export const getEnabledExpansions = expansions => (expansions
-  .filter(expansion => expansion.enabled)
-  .map(expansion => expansion.name));
+export const getEnabledExpansions = expansions =>
+  expansions
+    .filter(expansion => expansion.enabled)
+    .map(expansion => expansion.name);
 
-export const filterByEnabledExpansions = (expansions, data) => data.filter(({ set }) =>
-  expansions.some(expansion => set === expansion)
-);
+export const filterByEnabledExpansions = (expansions, data) =>
+  data.filter(({ set }) => expansions.some(expansion => set === expansion));
 
 export const getInitialConfig = players => {
   switch (players) {
@@ -15,6 +15,7 @@ export const getInitialConfig = players => {
         game: Map({
           bystanders: 2,
           henchmen: List(),
+          heroes: List(),
           villains: List()
         }),
         needed: Map({
@@ -28,6 +29,7 @@ export const getInitialConfig = players => {
         game: Map({
           bystanders: 8,
           henchmen: List(),
+          heroes: List(),
           villains: List()
         }),
         needed: Map({
@@ -41,6 +43,7 @@ export const getInitialConfig = players => {
         game: Map({
           bystanders: 8,
           henchmen: List(),
+          heroes: List(),
           villains: List()
         }),
         needed: Map({
@@ -54,6 +57,7 @@ export const getInitialConfig = players => {
         game: Map({
           bystanders: 12,
           henchmen: List(),
+          heroes: List(),
           villains: List()
         }),
         needed: Map({

@@ -1,37 +1,54 @@
-import { filterByEnabledExpansions, getEnabledExpansions, getInitialConfig } from '../services/gen.js';
+import {
+  filterByEnabledExpansions,
+  getEnabledExpansions,
+  getInitialConfig
+} from '../services/gen.js';
 
 export const addHenchmen = hm => state => {
   const game = state.game.update('henchmen', henchmen => henchmen.push(hm));
-  const needed = state.needed.update('henchmen', num => num - 1);
-  return { game, needed };
+  return { game };
+};
+
+export const addHero = hero => state => {
+  const game = state.game.update('heroes', heroes => heroes.push(hero));
+  return { game };
 };
 
 export const addVillain = villain => state => {
-  const game = state.game.update('villains', villains => villains.push(villain));
-  const needed = state.needed.update('villains', num => num - 1);
-  return { game, needed };
+  const game = state.game.update('villains', villains =>
+    villains.push(villain)
+  );
+  return { game };
 };
 
 export const generateGame = () => (state, actions) => {
   actions.pickMastermind();
   actions.pickScheme();
 
-  for (let i = state.needed.get('villains'); i > 0; i--) {
+  for (let i = 0; i < state.needed.get('villains'); i++) {
     actions.pickVillain();
   }
 
-  for (let i = state.needed.get('henchmen'); i > 0; i--) {
+  for (let i = 0; i < state.needed.get('henchmen'); i++) {
     actions.pickHenchmen();
+  }
+
+  for (let i = 0; i < state.needed.get('heroes'); i++) {
+    actions.pickHero();
   }
 };
 
 export const pickHenchmen = () => (state, actions) => {
   const enabledExpansions = getEnabledExpansions(state.expansions);
-  const possibleHenchmen = filterByEnabledExpansions(enabledExpansions, state.henchmen);
+  const possibleHenchmen = filterByEnabledExpansions(
+    enabledExpansions,
+    state.henchmen
+  );
   const randomIndex = Math.floor(Math.random() * possibleHenchmen.size);
   const selectedHenchmen = possibleHenchmen.get(randomIndex);
 
-  const found = state.game.get('henchmen')
+  const found = state.game
+    .get('henchmen')
     .find(henchmen => henchmen.name === selectedHenchmen.name);
 
   if (found) {
@@ -42,9 +59,33 @@ export const pickHenchmen = () => (state, actions) => {
   actions.addHenchmen(selectedHenchmen);
 };
 
+export const pickHero = () => (state, actions) => {
+  const enabledExpansions = getEnabledExpansions(state.expansions);
+  const possibleHeroes = filterByEnabledExpansions(
+    enabledExpansions,
+    state.heroes
+  );
+  const randomIndex = Math.floor(Math.random() * possibleHeroes.size);
+  const selectedHero = possibleHeroes.get(randomIndex);
+
+  const found = state.game
+    .get('heroes')
+    .find(hero => hero.name === selectedHero.name);
+
+  if (found) {
+    actions.pickHero();
+    return;
+  }
+
+  actions.addHero(selectedHero);
+};
+
 export const pickMastermind = () => state => {
   const enabledExpansions = getEnabledExpansions(state.expansions);
-  const possibleMasterminds = filterByEnabledExpansions(enabledExpansions, state.masterminds);
+  const possibleMasterminds = filterByEnabledExpansions(
+    enabledExpansions,
+    state.masterminds
+  );
   const randomIndex = Math.floor(Math.random() * possibleMasterminds.size);
   const selectedMastermind = possibleMasterminds.get(randomIndex);
 
@@ -55,7 +96,10 @@ export const pickMastermind = () => state => {
 
 export const pickScheme = () => state => {
   const enabledExpansions = getEnabledExpansions(state.expansions);
-  const possibleSchemes = filterByEnabledExpansions(enabledExpansions, state.schemes);
+  const possibleSchemes = filterByEnabledExpansions(
+    enabledExpansions,
+    state.schemes
+  );
   const randomIndex = Math.floor(Math.random() * possibleSchemes.size);
   const selectedScheme = possibleSchemes.get(randomIndex);
 
@@ -66,11 +110,15 @@ export const pickScheme = () => state => {
 
 export const pickVillain = () => (state, actions) => {
   const enabledExpansions = getEnabledExpansions(state.expansions);
-  const possibleVillains = filterByEnabledExpansions(enabledExpansions, state.villains);
+  const possibleVillains = filterByEnabledExpansions(
+    enabledExpansions,
+    state.villains
+  );
   const randomIndex = Math.floor(Math.random() * possibleVillains.size);
   const selectedVillain = possibleVillains.get(randomIndex);
 
-  const foundVillain = state.game.get('villains')
+  const foundVillain = state.game
+    .get('villains')
     .find(villain => villain.name === selectedVillain.name);
 
   if (foundVillain) {
@@ -99,9 +147,11 @@ export const toggleExpansion = name => state => {
 
 export default {
   addHenchmen,
+  addHero,
   addVillain,
   generateGame,
   pickHenchmen,
+  pickHero,
   pickMastermind,
   pickScheme,
   pickVillain,
