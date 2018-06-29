@@ -90,19 +90,29 @@
     { "name": "X-Cutioner's Song", "set": "Dark City" }
   ],
   "villains": [
+    { "name": "Emissaries of Evil", "set": "Dark City" },
     { "name": "Enemies of Asgard", "set": "Base Game" },
+    { "name": "Four Horsemen", "set": "Dark City" },
     { "name": "Heralds of Galactus", "set": "Fantastic Four" },
     { "name": "Hydra", "set": "Base Game" },
+    { "name": "Infinity Gems", "set": "Guardians of the Galaxy" },
+    { "name": "Kree Starforce", "set": "Guardians of the Galaxy" },
+    { "name": "Marauders", "set": "Dark City" },
     { "name": "Masters of Evil", "set": "Base Game" },
     {
       "name": "Masters of Evil (WWII)",
       "set": "Captain America 75th Anniversary"
     },
+    { "name": "Maximum Carnage", "set": "Paint the Town Red" },
+    { "name": "MLF", "set": "Dark City" },
     { "name": "Radiation", "set": "Base Game" },
+    { "name": "Sinister Six", "set": "Paint the Town Red" },
     { "name": "Skrulls", "set": "Base Game" },
     { "name": "Spider-Foes", "set": "Base Game" },
+    { "name": "Streets of New York", "set": "Dark City" },
     { "name": "Subterranea", "set": "Fantastic Four" },
     { "name": "The Brotherhood", "set": "Base Game" },
+    { "name": "Underworld", "set": "Dark City" },
     { "name": "Zola's Creations", "set": "Captain America 75th Anniversary" }
   ]
 }
