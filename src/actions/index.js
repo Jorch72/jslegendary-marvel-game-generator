@@ -21,18 +21,16 @@ export const addVillain = villain => state => {
   return { game };
 };
 
+export const decrementNeeded = type => state => ({
+  needed: state.needed.update(type, t => t - 1)
+});
+
 export const generateGame = () => (state, actions) => {
   actions.reset(state.players);
   actions.pickMastermind();
   actions.pickScheme();
-
-  for (let i = 0; i < state.needed.get('villains'); i++) {
-    actions.pickVillain();
-  }
-
-  for (let i = 0; i < state.needed.get('henchmen'); i++) {
-    actions.pickHenchmen();
-  }
+  actions.pickVillains();
+  actions.pickHenchmenGroups();
 
   for (let i = 0; i < state.needed.get('heroes'); i++) {
     actions.pickHero();
@@ -62,6 +60,12 @@ export const pickHenchmen = () => (state, actions) => {
   actions.addHenchmen(selectedHenchmen);
 };
 
+export const pickHenchmenGroups = () => (state, actions) => {
+  for (let i = 0; i < state.needed.get('henchmen'); i++) {
+    actions.pickHenchmen();
+  }
+};
+
 export const pickHero = () => (state, actions) => {
   const enabledExpansions = getEnabledExpansions(state.expansions);
   const possibleHeroes = filterByEnabledExpansions(
@@ -83,7 +87,7 @@ export const pickHero = () => (state, actions) => {
   actions.addHero(selectedHero);
 };
 
-export const pickMastermind = () => state => {
+export const pickMastermind = () => (state, actions) => {
   const enabledExpansions = getEnabledExpansions(state.expansions);
   const possibleMasterminds = filterByEnabledExpansions(
     enabledExpansions,
@@ -92,9 +96,21 @@ export const pickMastermind = () => state => {
   const randomIndex = Math.floor(Math.random() * possibleMasterminds.size);
   const selectedMastermind = possibleMasterminds.get(randomIndex);
 
-  return {
-    game: state.game.set('mastermind', selectedMastermind)
-  };
+  if (selectedMastermind.villains) {
+    const villain = state.villains.toJS()
+      .find(villain => villain.name === selectedMastermind.villains);
+    actions.addVillain(villain);
+    actions.decrementNeeded('villains');
+  }
+
+  if (selectedMastermind.henchmen) {
+    const henchmen = state.henchmen.toJS()
+      .find(henchmen => henchmen.name === selectedMastermind.henchmen);
+    actions.addHenchmen(henchmen);
+    actions.decrementNeeded('henchmen');
+  }
+
+  actions.setMastermind(selectedMastermind);
 };
 
 export const pickScheme = () => state => {
@@ -132,6 +148,12 @@ export const pickVillain = () => (state, actions) => {
   actions.addVillain(selectedVillain);
 };
 
+export const pickVillains = () => (state, actions) => {
+  for (let i = 0; i < state.needed.get('villains'); i++) {
+    actions.pickVillain();
+  }
+};
+
 export const reset = getInitialConfig;
 
 export const selectPlayers = (players) => {
@@ -139,6 +161,10 @@ export const selectPlayers = (players) => {
   state.showResults = false;
   return state;
 };
+
+export const setMastermind = mastermind => state => ({
+  game: state.game.set('mastermind', mastermind)
+});
 
 export const showResults = () => ({
   showResults: true
@@ -162,14 +188,18 @@ export default {
   addHenchmen,
   addHero,
   addVillain,
+  decrementNeeded,
   generateGame,
   pickHenchmen,
+  pickHenchmenGroups,
   pickHero,
   pickMastermind,
   pickScheme,
   pickVillain,
+  pickVillains,
   reset,
   selectPlayers,
+  setMastermind,
   showResults,
   toggleExpansion
 };
