@@ -36,6 +36,8 @@ export const generateGame = () => (state, actions) => {
   for (let i = 0; i < state.needed.get('heroes'); i++) {
     actions.pickHero();
   }
+
+  actions.showResults();
 };
 
 export const pickHenchmen = () => (state, actions) => {
@@ -131,6 +133,10 @@ export const pickVillain = () => (state, actions) => {
 
 export const selectPlayers = getInitialConfig;
 
+export const showResults = () => ({
+  showResults: true
+});
+
 export const toggleExpansion = name => state => {
   const findExpansion = expansion => expansion.name === name;
   const index = state.expansions.findIndex(findExpansion);
@@ -156,5 +162,6 @@ export default {
   pickScheme,
   pickVillain,
   selectPlayers,
+  showResults,
   toggleExpansion
 };

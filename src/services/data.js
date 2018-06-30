@@ -23,6 +23,7 @@ export const loadData = () => {
       rawData.masterminds.map(mastermind => Mastermind(mastermind))
     ),
     schemes: List(rawData.schemes.map(scheme => Scheme(scheme))),
+    showResults: false,
     villains: List(rawData.villains.map(villain => Villain(villain)))
   };
 };
