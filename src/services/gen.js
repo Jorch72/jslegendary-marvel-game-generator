@@ -22,7 +22,8 @@ export const getInitialConfig = players => {
           henchmen: 1,
           heroes: 5,
           villains: 2
-        })
+        }),
+        players: 2
       };
     case 3:
       return {
@@ -36,7 +37,8 @@ export const getInitialConfig = players => {
           henchmen: 1,
           heroes: 5,
           villains: 3
-        })
+        }),
+        players: 3
       };
     case 4:
       return {
@@ -50,7 +52,8 @@ export const getInitialConfig = players => {
           henchmen: 2,
           heroes: 5,
           villains: 3
-        })
+        }),
+        players: 4
       };
     case 5:
       return {
@@ -64,7 +67,8 @@ export const getInitialConfig = players => {
           henchmen: 2,
           heroes: 6,
           villains: 4
-        })
+        }),
+        players: 5
       };
   }
 };

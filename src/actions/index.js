@@ -22,6 +22,7 @@ export const addVillain = villain => state => {
 };
 
 export const generateGame = () => (state, actions) => {
+  actions.reset(state.players);
   actions.pickMastermind();
   actions.pickScheme();
 
@@ -131,7 +132,13 @@ export const pickVillain = () => (state, actions) => {
   actions.addVillain(selectedVillain);
 };
 
-export const selectPlayers = getInitialConfig;
+export const reset = getInitialConfig;
+
+export const selectPlayers = (players) => {
+  const state = getInitialConfig(players);
+  state.showResults = false;
+  return state;
+};
 
 export const showResults = () => ({
   showResults: true
@@ -161,6 +168,7 @@ export default {
   pickMastermind,
   pickScheme,
   pickVillain,
+  reset,
   selectPlayers,
   showResults,
   toggleExpansion

@@ -22,6 +22,7 @@ export const loadData = () => {
     masterminds: List(
       rawData.masterminds.map(mastermind => Mastermind(mastermind))
     ),
+    players: 0,
     schemes: List(rawData.schemes.map(scheme => Scheme(scheme))),
     showResults: false,
     villains: List(rawData.villains.map(villain => Villain(villain)))
