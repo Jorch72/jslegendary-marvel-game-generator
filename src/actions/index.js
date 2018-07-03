@@ -97,14 +97,16 @@ export const pickMastermind = () => (state, actions) => {
   const selectedMastermind = possibleMasterminds.get(randomIndex);
 
   if (selectedMastermind.villains) {
-    const villain = state.villains.toJS()
+    const villain = state.villains
+      .toJS()
       .find(villain => villain.name === selectedMastermind.villains);
     actions.addVillain(villain);
     actions.decrementNeeded('villains');
   }
 
   if (selectedMastermind.henchmen) {
-    const henchmen = state.henchmen.toJS()
+    const henchmen = state.henchmen
+      .toJS()
       .find(henchmen => henchmen.name === selectedMastermind.henchmen);
     actions.addHenchmen(henchmen);
     actions.decrementNeeded('henchmen');
@@ -156,7 +158,7 @@ export const pickVillains = () => (state, actions) => {
 
 export const reset = getInitialConfig;
 
-export const selectPlayers = (players) => {
+export const selectPlayers = players => {
   const state = getInitialConfig(players);
   state.showResults = false;
   return state;
