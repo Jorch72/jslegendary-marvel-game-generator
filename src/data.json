@@ -169,24 +169,9 @@
   ],
   "masterminds": [
     {
-      "name": "Arnim Zola",
-      "set": "Captain America 75th Anniversary",
-      "villains": "Zola's Creations"
-    },
-    {
-      "name": "Baron Heinrich Zemo",
-      "set": "Captain America 75th Anniversary",
-      "villains": "Masters of Evil (WWII)"
-    },
-    {
       "name": "Doctor Doom",
       "set": "Base Game",
       "henchmen": "Doombot Legion"
-    },
-    {
-      "name": "Galactus",
-      "set": "Fantastic Four",
-      "villains": "Heralds of Galactus"
     },
     {
       "name": "Loki",
@@ -199,14 +184,74 @@
       "villains": "The Brotherhood"
     },
     {
+      "name": "Red Skull",
+      "set": "Base Game",
+      "villains": "Hydra"
+    },
+    {
+      "name": "Arnim Zola",
+      "set": "Captain America 75th Anniversary",
+      "villains": "Zola's Creations"
+    },
+    {
+      "name": "Baron Heinrich Zemo",
+      "set": "Captain America 75th Anniversary",
+      "villains": "Masters of Evil (WWII)"
+    },
+    {
+      "name": "Apocalypse",
+      "set": "Dark City",
+      "villains": "Four Horsemen"
+    },
+    {
+      "name": "Kingpin",
+      "set": "Dark City",
+      "villains": "Streets of New York"
+    },
+    {
+      "name": "Mephisto",
+      "set": "Dark City",
+      "villains": "Underworld"
+    },
+    {
+      "name": "Mr. Sinister",
+      "set": "Dark City",
+      "villains": "Marauders"
+    },
+    {
+      "name": "Stryfe",
+      "set": "Dark City",
+      "villains": "MLF"
+    },
+    {
+      "name": "Galactus",
+      "set": "Fantastic Four",
+      "villains": "Heralds of Galactus"
+    },
+    {
       "name": "Mole Man",
       "set": "Fantastic Four",
       "villains": "Subterranea"
     },
     {
-      "name": "Red Skull",
-      "set": "Base Game",
-      "villains": "Hydra"
+      "name": "Supreme Intelligence of Kree",
+      "set": "Guardians of the Galaxy",
+      "villains": "Kree Starforce"
+    },
+    {
+      "name": "Thanos",
+      "set": "Guardians of the Galaxy",
+      "villains": "Infinity Gems"
+    },
+    {
+      "name": "Carnage",
+      "set": "Paint the Town Red",
+      "villains": "Maximum Carnage"
+    },
+    {
+      "name": "Mysterio",
+      "set": "Paint the Town Red",
+      "villains": "Sinister Six"
     }
   ],
   "schemes": [
