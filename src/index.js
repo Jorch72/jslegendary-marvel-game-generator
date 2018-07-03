@@ -10,8 +10,6 @@ const data = loadData();
 const view = (state, actions) => (
   <div>
     <h1>LEGENDARY Game Generator</h1>
-    <button onclick={() => console.log(state)}>Log State</button>
-    <button onclick={() => console.log(actions)}>Log Actions</button>
 
     <h2>Choose Number of Players:</h2>
     <PlayerButtons selectPlayers={actions.selectPlayers} />
@@ -25,9 +23,4 @@ const view = (state, actions) => (
   </div>
 );
 
-app(
-  data,
-  actions,
-  view,
-  document.body
-);
+app(data, actions, view, document.body);
