@@ -4,12 +4,13 @@ import { loadData } from './services/data.js';
 import ExpansionList from './components/ExpansionList.js';
 import GameDisplay from './components/GameDisplay.js';
 import PlayerButtons from './components/PlayerButtons.js';
+import H1 from './components/styles/Title.js';
 
 const data = loadData();
 
 const view = (state, actions) => (
   <div>
-    <h1>LEGENDARY Game Generator</h1>
+    <H1>LEGENDARY Game Generator</H1>
 
     <h2>Choose Number of Players:</h2>
     <PlayerButtons selectPlayers={actions.selectPlayers} />
