@@ -161,11 +161,17 @@ export const reset = getInitialConfig;
 export const selectPlayers = players => {
   const state = getInitialConfig(players);
   state.showResults = false;
+  state.section = 1;
+  console.log('SELECT PLAYERS', state);
   return state;
 };
 
 export const setMastermind = mastermind => state => ({
   game: state.game.set('mastermind', mastermind)
+});
+
+export const setSection = section => state => ({
+  section: section
 });
 
 export const showResults = () => ({
@@ -202,6 +208,7 @@ export default {
   reset,
   selectPlayers,
   setMastermind,
+  setSection,
   showResults,
   toggleExpansion
 };

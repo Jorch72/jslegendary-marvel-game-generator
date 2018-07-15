@@ -24,6 +24,7 @@ export const loadData = () => {
     ),
     players: 0,
     schemes: List(rawData.schemes.map(scheme => Scheme(scheme))),
+    section: 0,
     showResults: false,
     villains: List(rawData.villains.map(villain => Villain(villain)))
   };
