@@ -5,13 +5,19 @@
     "Dark City",
     "Fantastic Four",
     "Guardians of the Galaxy",
-    "Paint the Town Red"
+    "Paint the Town Red",
+    "Secret Wars, Volume 1"
   ],
   "henchmen": [
     { "name": "Doombot Legion", "set": "Base Game" },
+    { "name": "Ghost Racers", "set": "Secret Wars, Volume 1" },
     { "name": "Hand Ninjas", "set": "Base Game" },
+    { "name": "Maggia Goons", "set": "Dark City" },
+    { "name": "M.O.D.O.K.S", "set": "Secret Wars, Volume 1" },
+    { "name": "Phalanx", "set": "Dark City" },
     { "name": "Savage Land Mutates", "set": "Base Game" },
-    { "name": "Sentinels", "set": "Base Game" }
+    { "name": "Sentinels", "set": "Base Game" },
+    { "name": "Thor Corps", "set": "Secret Wars, Volume 1" }
   ],
   "heroes": [
     { "affiliation": "Avengers", "name": "Black Widow", "set": "Base Game" },
@@ -30,10 +36,40 @@
       "name": "Captain America (Falcon)",
       "set": "Captain America 75th Anniversary"
     },
+    {
+      "affiliation": "Avengers",
+      "name": "Captain Marvel",
+      "set": "Secret Wars, Volume 1"
+    },
     { "affiliation": "Avengers", "name": "Hawkeye", "set": "Base Game" },
     { "affiliation": "Avengers", "name": "Hulk", "set": "Base Game" },
     { "affiliation": "Avengers", "name": "Iron Man", "set": "Base Game" },
+    {
+      "affiliation": "Avengers",
+      "name": "Lady Thor",
+      "set": "Secret Wars, Volume 1"
+    },
     { "affiliation": "Avengers", "name": "Thor", "set": "Base Game" },
+    {
+      "affiliation": "Cabal",
+      "name": "Maximus",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "affiliation": "Cabal",
+      "name": "Namor, The Sub-Mariner",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "affiliation": "Cabal",
+      "name": "Proxima Midnight",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "affiliation": "Cabal",
+      "name": "Thanos",
+      "set": "Secret Wars, Volume 1"
+    },
     {
       "affiliation": "Fantastic Four",
       "name": "Human Torch",
@@ -78,6 +114,26 @@
       "affiliation": "Guardians of the Galaxy",
       "name": "Star-Lord",
       "set": "Guardians of the Galaxy"
+    },
+    {
+      "affiliation": "Illuminati",
+      "name": "Black Bolt",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "affiliation": "Illuminati",
+      "name": "Black Panther",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "affiliation": "Illuminati",
+      "name": "Doctor Strange",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "affiliation": "Illuminati",
+      "name": "Superior Iron Man",
+      "set": "Secret Wars, Volume 1"
     },
     { "affiliation": "Marvel Knights", "name": "Blade", "set": "Dark City" },
     {
@@ -138,19 +194,35 @@
       "name": "Symbiote Spider-Man",
       "set": "Paint the Town Red"
     },
+    {
+      "affiliation": "Spider-Friends",
+      "name": "Ultimate Spider-Man",
+      "set": "Secret Wars, Volume 1"
+    },
     { "affiliation": "X-Force", "name": "Cable", "set": "Dark City" },
     { "affiliation": "X-Force", "name": "Colossus", "set": "Dark City" },
     { "affiliation": "X-Force", "name": "Domino", "set": "Dark City" },
     { "affiliation": "X-Force", "name": "Forge", "set": "Dark City" },
     { "affiliation": "X-Force", "name": "Wolverine", "set": "Dark City" },
     { "affiliation": "X-Men", "name": "Angel", "set": "Dark City" },
+    {
+      "affiliation": "X-Men",
+      "name": "Apocalyptic Kitty Pryde",
+      "set": "Secret Wars, Volume 1"
+    },
     { "affiliation": "X-Men", "name": "Bishop", "set": "Dark City" },
     { "affiliation": "X-Men", "name": "Cyclops", "set": "Base Game" },
     { "affiliation": "X-Men", "name": "Emma Frost", "set": "Base Game" },
     { "affiliation": "X-Men", "name": "Gambit", "set": "Base Game" },
     { "affiliation": "X-Men", "name": "Iceman", "set": "Dark City" },
     { "affiliation": "X-Men", "name": "Jean Grey", "set": "Dark City" },
+    { "affiliation": "X-Men", "name": "Magik", "set": "Secret Wars, Volume 1" },
     { "affiliation": "X-Men", "name": "Nightcrawler", "set": "Dark City" },
+    {
+      "affiliation": "X-Men",
+      "name": "Old Man Logan",
+      "set": "Secret Wars, Volume 1"
+    },
     { "affiliation": "X-Men", "name": "Professor X", "set": "Dark City" },
     { "affiliation": "X-Men", "name": "Rouge", "set": "Base Game" },
     { "affiliation": "X-Men", "name": "Storm", "set": "Base Game" },
@@ -252,6 +324,26 @@
       "name": "Mysterio",
       "set": "Paint the Town Red",
       "villains": "Sinister Six"
+    },
+    {
+      "name": "Madelyne Pryor, Goblin Queen",
+      "set": "Secret Wars, Volume 1",
+      "villains": "Limbo"
+    },
+    {
+      "name": "Nimrod, Super Sentinel",
+      "set": "Secret Wars, Volume 1",
+      "villains": "Sentinel Territories"
+    },
+    {
+      "name": "Wasteland Hulk",
+      "set": "Secret Wars, Volume 1",
+      "villains": "Wasteland"
+    },
+    {
+      "name": "Zombie Green Goblin",
+      "set": "Secret Wars, Volume 1",
+      "villains": "The Deadlands"
     }
   ],
   "schemes": [
@@ -260,10 +352,26 @@
       "name": "Brainwash the Military",
       "set": "Captain America 75th Anniversary"
     },
+    {
+      "name": "Build an Army of Annihilation",
+      "set": "Secret Wars, Volume 1"
+    },
     { "name": "Capture Baby Hope", "set": "Dark City" },
     {
       "name": "Change the Outcome of WWII",
       "set": "Captain America 75th Anniversary"
+    },
+    {
+      "name": "Corrupt the Next Generation of Heroes",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "name": "Crush Them With My Bare Hands",
+      "set": "Secret Wars, Volume 1"
+    },
+    {
+      "name": "Dark Alliance",
+      "set": "Secret Wars, Volume 1"
     },
     { "name": "Detonate the Helicarrier", "set": "Dark City" },
     {
@@ -271,6 +379,10 @@
       "set": "Fantastic Four"
     },
     { "name": "Forge the Infinity Gauntlet", "set": "Guardians of the Galaxy" },
+    {
+      "name": "Fragmented Realities",
+      "set": "Secret Wars, Volume 1"
+    },
     {
       "name": "Go Back In Time to Slay Heroes' Ancestors",
       "set": "Captain America 75th Anniversary"
@@ -282,9 +394,17 @@
     { "name": "Invade the Daily Bugle News HQ", "set": "Paint the Town Red" },
     { "name": "Invincible Force Field", "set": "Fantastic Four" },
     { "name": "Massive Earthquake Generator", "set": "Dark City" },
+    {
+      "name": "Master of Tyrants",
+      "set": "Secret Wars, Volume 1"
+    },
     { "name": "Midtown Bank Robbery", "set": "Base Game" },
     { "name": "Negative Zone Prison Breakout", "set": "Base Game" },
     { "name": "Organized Crime Wave", "set": "Dark City" },
+    {
+      "name": "Pan-Dimensional Plague",
+      "set": "Secret Wars, Volume 1"
+    },
     { "name": "Portals to the Dark Dimension", "set": "Base Game" },
     { "name": "Pull Reality Into the Negative Zone", "set": "Fantastic Four" },
     { "name": "Replace Earth's Leaders with Killbots", "set": "Base Game" },
@@ -292,6 +412,10 @@
     {
       "name": "Secret Invasion of the Skrull Shapeshifters",
       "set": "Base Game"
+    },
+    {
+      "name": "Smash Two Dimensions Together",
+      "set": "Secret Wars, Volume 1"
     },
     { "name": "Splice Humans with Spider DNA", "set": "Paint the Town Red" },
     { "name": "Steal the Weaponized Plutonium", "set": "Dark City" },
@@ -310,6 +434,7 @@
     { "name": "X-Cutioner's Song", "set": "Dark City" }
   ],
   "villains": [
+    { "name": "Domain of Apocalypse", "set": "Secret Wars, Volume 1" },
     { "name": "Emissaries of Evil", "set": "Dark City" },
     { "name": "Enemies of Asgard", "set": "Base Game" },
     { "name": "Four Horsemen", "set": "Dark City" },
@@ -317,6 +442,8 @@
     { "name": "Hydra", "set": "Base Game" },
     { "name": "Infinity Gems", "set": "Guardians of the Galaxy" },
     { "name": "Kree Starforce", "set": "Guardians of the Galaxy" },
+    { "name": "Limbo", "set": "Secret Wars, Volume 1" },
+    { "name": "Manhattan (Earth - 1610)", "set": "Secret Wars, Volume 1" },
     { "name": "Marauders", "set": "Dark City" },
     { "name": "Masters of Evil", "set": "Base Game" },
     {
@@ -326,13 +453,16 @@
     { "name": "Maximum Carnage", "set": "Paint the Town Red" },
     { "name": "MLF", "set": "Dark City" },
     { "name": "Radiation", "set": "Base Game" },
+    { "name": "Sentinel Territories", "set": "Secret Wars, Volume 1" },
     { "name": "Sinister Six", "set": "Paint the Town Red" },
     { "name": "Skrulls", "set": "Base Game" },
     { "name": "Spider-Foes", "set": "Base Game" },
     { "name": "Streets of New York", "set": "Dark City" },
     { "name": "Subterranea", "set": "Fantastic Four" },
     { "name": "The Brotherhood", "set": "Base Game" },
+    { "name": "The Deadlands", "set": "Secret Wars, Volume 1" },
     { "name": "Underworld", "set": "Dark City" },
+    { "name": "Wasteland", "set": "Secret Wars, Volume 1" },
     { "name": "Zola's Creations", "set": "Captain America 75th Anniversary" }
   ]
 }
