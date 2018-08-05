@@ -9,7 +9,6 @@
     "start": "parcel src/index.html"
   },
   "dependencies": {
-    "emotion": "^9.2.4",
     "hyperapp": "^1.2.6",
     "immutable": "^3.8.2"
   },
