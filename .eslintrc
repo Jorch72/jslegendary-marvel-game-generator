@@ -1,7 +1,12 @@
 {
   "extends": "gsandf-react",
   "rules": {
-    "react/no-unknown-property": [1, { ignore: ["onclick", "onchange"] }],
+    "react/no-unknown-property": [
+      1,
+      { 
+        ignore: ["class", "onclick", "onchange"]
+      }
+    ],
     "react/prop-types": [0]
   },
   "settings": {
