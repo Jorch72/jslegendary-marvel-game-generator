@@ -16,13 +16,18 @@ const view = (state, actions) => {
     <div class="wrapper">
       <h1>LEGENDARY Game Generator</h1>
 
-      <main>
-        <Section current={state.section} section={0}>
+      <main
+        style={{
+          marginLeft: `${-(state.section * 100)}%`,
+          transition: 'margin-left ease-in-out 600ms'
+        }}
+      >
+        <Section>
           <h2>How Many Players?</h2>
           <PlayerButtons selectPlayers={actions.selectPlayers} />
         </Section>
 
-        <Section current={state.section} section={1}>
+        <Section>
           <h2>Which Expansions Do You Want To Use?</h2>
           <ExpansionList
             toggle={actions.toggleExpansion}
