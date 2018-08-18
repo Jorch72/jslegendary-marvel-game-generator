@@ -1,0 +1,41 @@
+html {
+  font-size: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto Condensed', monospace;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+h2 {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 200;
+  font-size: 1.8rem;
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+main {
+  display: flex;
+  overflow: hidden;
+  margin-left: 0vw;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+section {
+  flex: 0 0 100vw;
+}
+
