@@ -5,13 +5,20 @@ const component = ({ expansions, toggle }) => {
   return (
     <ul>
       {expansions.toJS().map(({ enabled, name }) => (
-        <li key={name}>
-          <input
-            type="checkbox"
-            checked={enabled}
-            onclick={toggleOnClick(name)}
-          />
-          <label>{name}</label>
+        <li
+          key={name}
+          style={{
+            backgroundColor: enabled ? '#aaf' : '#fff'
+          }}
+        >
+          <label>
+            <input
+              type="checkbox"
+              checked={enabled}
+              onclick={toggleOnClick(name)}
+            />
+            {name}
+          </label>
         </li>
       ))}
     </ul>
