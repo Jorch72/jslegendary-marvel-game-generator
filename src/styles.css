@@ -5,28 +5,31 @@ html {
 body {
   margin: 0;
   font-family: 'Roboto Condensed', monospace;
+  height: 100%;
 }
 
 h1 {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 2rem;
-  margin: 0 0 1rem;
+  margin: 0;
   text-align: center;
+  flex: 0 0 auto;
 }
 
 h2 {
   font-family: 'Oswald', sans-serif;
   font-weight: 200;
   font-size: 1.8rem;
-  margin: 0 0 1rem;
+  margin: 0 0 2rem;
   text-align: center;
 }
 
 main {
   display: flex;
   overflow: hidden;
-  margin-left: 0vw;
+  align-items: center;
+  flex: 1 0 auto;
 }
 
 .wrapper {
@@ -37,5 +40,21 @@ main {
 
 section {
   flex: 0 0 100vw;
+}
+
+button {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1rem;
+  border: none;
+  background-color: #eee;
+  padding: 0.5rem;
+  min-width: 100px;
+}
+
+.player-buttons {
+  display: flex;
+  justify-content: space-around;
+  max-width: 650px;
+  margin: 0 auto;
 }
 
