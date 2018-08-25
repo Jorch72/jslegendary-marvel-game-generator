@@ -162,12 +162,12 @@ export const selectPlayers = players => {
   const state = getInitialConfig(players);
   state.showResults = false;
   state.section = 1;
-  console.log('SELECT PLAYERS', state);
   return state;
 };
 
 export const setMastermind = mastermind => state => ({
-  game: state.game.set('mastermind', mastermind)
+  game: state.game.set('mastermind', mastermind),
+  section: 2
 });
 
 export const setSection = section => state => ({

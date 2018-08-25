@@ -1,4 +1,4 @@
-import { List } from 'immutable';
+import { List, Map } from 'immutable';
 import rawData from '../data.json';
 import Expansion from '../types/Expansion.js';
 import Henchmen from '../types/Henchmen.js';
@@ -17,6 +17,7 @@ export const loadData = () => {
           })
       )
     ),
+    game: Map(),
     henchmen: List(rawData.henchmen.map(henchmen => Henchmen(henchmen))),
     heroes: List(rawData.heroes.map(hero => Hero(hero))),
     masterminds: List(

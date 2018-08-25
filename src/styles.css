@@ -25,6 +25,20 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-size: 1.5rem;
+  margin: 2rem 0 0;
+  text-align: center;
+}
+
+h4 {
+  color: #777;
+  font-size: 1.1rem;
+  font-weight: normal;
+  margin: 0.5rem 0 2rem;
+  text-align: center;
+}
+
 main {
   display: flex;
   overflow: hidden;

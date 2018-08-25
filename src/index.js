@@ -4,6 +4,7 @@ import { loadData } from './services/data.js';
 import ButtonList from './components/ButtonList.js';
 import ExpansionList from './components/ExpansionList.js';
 // import GameDisplay from './components/GameDisplay.js';
+import MastermindSection from './components/MastermindSection.js';
 import PlayerButtons from './components/PlayerButtons.js';
 import Section from './components/Section.js';
 import './styles.css';
@@ -11,8 +12,6 @@ import './styles.css';
 const data = loadData();
 
 const view = (state, actions) => {
-  const goToSection2 = () => actions.setSection(2);
-
   return (
     <div class="wrapper">
       <h1>LEGENDARY Game Generator</h1>
@@ -36,9 +35,15 @@ const view = (state, actions) => {
           />
           <ButtonList>
             <button onclick={() => actions.setSection(1)}>Back</button>
-            <button onclick={goToSection2}>Next</button>
+            <button onclick={() => actions.pickMastermind()}>Next</button>
           </ButtonList>
         </Section>
+
+        <MastermindSection
+          mastermind={state.game.get('mastermind') || {}}
+          reroll={actions.pickMastermind}
+          setSection={actions.setSection}
+        />
       </main>
     </div>
   );
