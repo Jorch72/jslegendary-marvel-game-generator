@@ -1,6 +1,7 @@
 import { h, app } from 'hyperapp';
 import actions from './actions/index.js';
 import { loadData } from './services/data.js';
+import ButtonList from './components/ButtonList.js';
 import ExpansionList from './components/ExpansionList.js';
 // import GameDisplay from './components/GameDisplay.js';
 import PlayerButtons from './components/PlayerButtons.js';
@@ -33,7 +34,10 @@ const view = (state, actions) => {
             toggle={actions.toggleExpansion}
             expansions={state.expansions}
           />
-          <button onclick={goToSection2}>Next</button>
+          <ButtonList>
+            <button onclick={() => actions.setSection(1)}>Back</button>
+            <button onclick={goToSection2}>Next</button>
+          </ButtonList>
         </Section>
       </main>
     </div>

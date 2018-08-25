@@ -51,7 +51,7 @@ button {
   min-width: 100px;
 }
 
-.player-buttons {
+.button-list {
   display: flex;
   justify-content: space-around;
   max-width: 650px;
